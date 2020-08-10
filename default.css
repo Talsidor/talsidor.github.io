@@ -1,0 +1,158 @@
+body
+{
+  background:   white;
+  color:        #333;
+  padding:      0;
+  margin:       0;
+  font-family:  "Poppins", sans-serif;
+  font-size:    14pt;
+  line-height:  150%;
+  height:       100%;
+  max-width:    950px;
+  margin:       0 auto;
+}
+
+@-webkit-keyframes rainbow {  
+   0% { color: #06c; }
+  25% { color: #c06; }
+  50% { color: #c60; }
+  75% { color: #0c6; }
+}
+
+h1, h2
+{
+  color:           #06c;
+  font-style:      normal;
+  padding-top:     20px;
+
+  -webkit-animation-name: rainbow;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-duration: 60s; 
+}
+
+h1
+{
+  margin-bottom:   -5px;
+  font-style:      bold;
+}
+
+h2
+{
+  border-bottom:   1px solid #ccc;
+}
+
+hr 
+{
+  border-style: solid;
+  border-color: #ccc;
+  border-bottom: 1px;
+}
+
+ul
+{
+  list-style: square;
+}
+
+#toplist li
+{
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+#spacelist li
+{
+  margin-bottom: 25px;
+}
+
+a:link, a:visited
+{
+  color: blue;
+  transition: all 0.2s ease-out;
+}
+
+a.link:hover
+{
+  color: skyblue;
+}
+
+#photo
+{
+  float: left;
+  margin-right: 40px;
+  border-radius: 25px;
+  /*padding-right: 40px;*/
+  /*margin-right: 40px;*/
+}
+
+div
+{
+  padding: 50px;
+}
+
+.game
+{
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+
+  filter: drop-shadow(3px 5px 3px black);
+  /*filter: blur(5px);*/
+  border-radius: 35px;
+
+  color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+.game li, .game h3, .game h4, .game p
+{
+  filter: drop-shadow(0px 0px 6px grey);
+}
+
+.game a:link, .game a:visited
+{
+  color:skyblue;
+}
+
+.game a:hover
+{
+  color:cyan;
+}
+
+#warden
+{
+  background-image: url("http://caca29130.staging-cloud.netregistry.net/press/warden/images/IntroSeq.png");
+}
+
+#attrition
+{
+  background-image: url("atr_cropped.jpg");
+  /*background-image: url("https://img.itch.zone/aW1hZ2UvMTE5NjY3LzcxNDM4MS5qcGc=/original/ZtSXCg.jpg");*/
+}
+
+#puppers
+{
+  background-image: url("https://img.itch.zone/aW1hZ2UvMTExOTY5LzUxOTY1Mi5wbmc=/original/SEOhpM.png");
+}
+
+#assetstore
+{
+  background-image: url("code.jpg");
+}
+
+#teaching
+{
+  background-image: url("lecture.jpg");
+  /*background-image: url("code.jpg");*/
+}
+
+.videoright
+{
+  position: relative;
+  z-index: 1000;
+  float: right;
+}
