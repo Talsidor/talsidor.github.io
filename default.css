@@ -1,3 +1,7 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
 body
 {
   background:   white;
@@ -66,13 +70,19 @@ ul
 
 a:link, a:visited
 {
-  color: blue;
+  color: #44f;
   transition: all 0.2s ease-out;
+  z-index: 2;
 }
 
 a.link:hover
 {
   color: skyblue;
+}
+
+a.darklink:hover
+{
+  color: #afe4f9;
 }
 
 #photo
@@ -84,16 +94,13 @@ a.link:hover
   /*margin-right: 40px;*/
 }
 
-div
-{
-  padding: 50px;
-}
-
 .game
 {
+  padding: 50px;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+  background: rgba(0, 0, 0, 0.1); 
   will-change: transform;
 
   filter: drop-shadow(3px 5px 3px black);
@@ -125,7 +132,7 @@ div
 
 #warden
 {
-  background-image: url("http://caca29130.staging-cloud.netregistry.net/press/warden/images/IntroSeq.png");
+  background-image: url("wardenbg.jpg");
 }
 
 #attrition
@@ -136,7 +143,7 @@ div
 
 #puppers
 {
-  background-image: url("https://img.itch.zone/aW1hZ2UvMTExOTY5LzUxOTY1Mi5wbmc=/original/SEOhpM.png");
+  background-image: url("puppersbg.jpg");
 }
 
 #assetstore
@@ -155,4 +162,187 @@ div
   position: relative;
   z-index: 1000;
   float: right;
+}
+
+table
+{
+  width: auto;
+  margin: 0 auto
+}
+
+table, tr
+{
+  border-collapse: collapse;
+  border: 2px dashed #ccc;
+}
+
+td
+{
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#title
+{
+  text-align: center;
+  font-size: 19px;
+  width: 200px;
+}
+
+#box-art
+{
+  max-width: 150px;
+  transform: skewY(5deg);
+  margin-top: 10px;
+  border: 4px solid #222;
+  border-radius: 5px;
+  box-shadow: 15px -5px 3px #aaa;
+  -webkit-box-reflect: below 5px linear-gradient(to bottom, rgba(0,0,0,0.0), 95%, rgba(0,0,0,0.6));
+  transition: all 0.2s ease;
+  z-index: -10;
+}
+
+#box-art:hover
+{
+  transform: scale(1.1);
+  box-shadow: 25px 4px 6px #aaa;
+  transition: all 0.3s ease;
+}
+
+#cta
+{
+  text-align: center;
+  font-size: 26px;
+  padding: 10px;
+  margin-left: 150px;
+  margin-right: 150px;
+  background-image: linear-gradient(to right, #FFC4C8, #FFF8A0, #C1F1C1, #C7ECFF, #E4CFFF, #F1CEF4);
+  border-radius: 30px;
+  line-height:  110%;
+}
+
+q
+{
+  font-size: 22px;
+}
+
+#quote
+{
+  background-color: #112;
+  border-radius: 45px;
+  padding: 20px;
+  color: #fff;
+}
+
+.emphasis
+{
+  font-size: 110%;
+  font-weight: 600;
+  color: #fff;
+}
+
+.rainbow-text {
+  background-image: linear-gradient(to right, #FFC4C8, #FFF8A0, #C1F1C1, #C7ECFF, #E4CFFF, #F1CEF4);
+  background-clip: text;
+  color: transparent;
+}
+
+.role
+{
+  position: relative;
+  width: 47%;
+  background-color: #ccd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0px 0px 12px;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 54%;
+  margin: -50px;
+  z-index: 1;
+}
+
+#fun-section
+{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.fun-bubble
+{
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 15px;
+  background-color: #00ffff55;
+  width: 360px;
+  text-align: center;
+}
+
+.reroll-button
+{
+  border-radius: 15px;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 5px;
+  background-color: #00ffff77;
+  transition: all 0.2s ease-out;
+}
+
+.reroll-button:hover
+{
+  scale: 110%;
+  background-color: orange;
+  transition: all 0.2s ease-out;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+.reroll-button:active
+{
+  scale: 80%;
+  background-color: #00ffff77;
+  transition: all 0.1s ease-out;
+  animation: none;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#experience-section
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  
+
+  flex-wrap: wrap;
+  flex-shrink: 1;
+}
+
+.exp
+{
+  padding: 15px;
+  padding-top: 1px;
+  border-radius: 15px;
+  background-color: #dcd;
+  height: fit-content;
 }
